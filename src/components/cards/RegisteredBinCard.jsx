@@ -32,13 +32,13 @@ export default function RegisteredBinCard({ bin }) {
                 <div className="flex flex-col justify-center items-center" ref={componentRef}>
                     <QRCode value={bin.id} />
                     <h1 className="mt-2 text-2xl font-semibold">{bin.id}</h1>
-                    <div className="mt-2 flex flex-wrap gap-2 justify-center items-center">
-                        <Button onClick={handlePrint} text="Print" />
-                        <Link to={`/home/reports/${bin.id}`} className="btn btn-default">
-                            Reports
-                        </Link>
-                        <Button variant="danger" text="Delete" loading={loading} onClick={() => handleDelete(bin.id)} />
-                    </div>
+                </div>
+                <div className="mt-2 flex flex-wrap gap-2 justify-center items-center">
+                    <Button onClick={handlePrint} text="Print" />
+                    <Link to={`/home/reports/${bin.id}`} className="btn btn-default">
+                        Reports
+                    </Link>
+                    <Button variant="danger" text="Delete" loading={loading} onClick={() => handleDelete(bin.id)} />
                 </div>
             </div>
         </div>
