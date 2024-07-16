@@ -7,6 +7,7 @@ import UserDropdownMenu from '../ui/UserDropdownMenu';
 import Logo from '../../assets/logo.png';
 import useNotifications from '../../hooks/useNotifications';
 import Loader from '../ui/Loader';
+import NotificationsDropdown from '../ui/NotificationsDropdown';
 
 export default function HomeLayout() {
     const [navOpen, setNavOpen] = useState(false);
@@ -30,7 +31,8 @@ export default function HomeLayout() {
                                 <span className="self-center text-xl font-bold sm:text-2xl whitespace-nowrap text-dark">Smart Bin</span>
                             </Link>
                         </div>
-                        <div className="flex items-center">
+                        <div className="flex items-center gap-3">
+                            <NotificationsDropdown />
                             <UserDropdownMenu />
                         </div>
                     </div>

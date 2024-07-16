@@ -16,7 +16,7 @@ export default function UserDropdownMenu() {
                 const userData = await getUser();
                 setUser(userData);
             } catch (error) {
-                toast.error(error);
+                console.log(error);
             }
         };
         fetchUser();
