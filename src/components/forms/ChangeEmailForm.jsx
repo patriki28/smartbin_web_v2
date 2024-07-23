@@ -1,13 +1,13 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { changeEmail } from '../../services/authService';
+import { getFirebaseAuthErrorMessage } from '../../utils/getFirebaseAuthErrorMessage';
+import { isEmail, isGmail } from '../../utils/validation';
+import AlertError from '../ui/AlertError';
 import Button from '../ui/Button';
 import Input from '../ui/Input';
 import PasswordInput from '../ui/PasswordInput';
-import { toast } from 'react-toastify';
-import { changeEmail } from '../../services/authService';
-import AlertError from '../ui/AlertError';
-import { useNavigate } from 'react-router-dom';
-import { isEmail, isGmail } from '../../utils/validation';
-import { getFirebaseAuthErrorMessage } from '../../utils/getFirebaseAuthErrorMessage';
 
 export default function ChangeEmailForm() {
     const navigate = useNavigate();

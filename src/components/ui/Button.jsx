@@ -8,6 +8,9 @@ export default function Button({ text, icon, type, variant, onClick, loading, di
         case 'secondary':
             variantClass = 'btn-secondary';
             break;
+        case 'success':
+            variantClass = 'btn-success';
+            break;
         case 'danger':
             variantClass = 'btn-error';
             break;
@@ -16,7 +19,12 @@ export default function Button({ text, icon, type, variant, onClick, loading, di
     }
 
     return (
-        <button type={type} onClick={onClick} disabled={loading ? loading : disabled} className={`btn ${variantClass} flex flex-row gap-2`}>
+        <button
+            type={type}
+            onClick={onClick}
+            disabled={loading ? loading : disabled}
+            className={`btn ${variantClass} flex flex-row gap-2 text-white`}
+        >
             {loading ? (
                 <span className="loading loading-spinner loading-md"></span>
             ) : (

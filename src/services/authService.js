@@ -1,16 +1,16 @@
 import {
+    EmailAuthProvider,
+    onAuthStateChanged,
+    reauthenticateWithCredential,
     sendEmailVerification,
     sendPasswordResetEmail,
     signInWithEmailAndPassword,
     signOut,
-    onAuthStateChanged,
-    EmailAuthProvider,
-    reauthenticateWithCredential,
-    verifyBeforeUpdateEmail,
     updatePassword,
+    verifyBeforeUpdateEmail,
 } from 'firebase/auth';
-import { auth, db } from '../config/firebase';
 import { doc, getDoc } from 'firebase/firestore';
+import { auth, db } from '../config/firebase';
 
 export const login = async (userData) => {
     try {
