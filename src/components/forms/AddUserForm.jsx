@@ -1,13 +1,11 @@
 import { useState } from 'react';
 import { toast } from 'react-toastify';
-
-import Input from '../ui/Input';
-import Button from '../ui/Button';
-import AlertError from '../ui/AlertError';
 import { createUser } from '../../services/userService';
+import AlertError from '../ui/AlertError';
+import Button from '../ui/Button';
+import Input from '../ui/Input';
 
 export default function AddUserForm() {
-    // const encryptedPassword = sessionStorage.getItem("password");
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [formData, setFormData] = useState({
