@@ -56,7 +56,7 @@ export default function ChangeEmailForm() {
             <div className="card-body">
                 <div className="flex flex-col gap-1 mb-2">
                     <label>New Email:</label>
-                    <Input type="email" name="email" value={email} onChange={handleChange} placeholder="johndoe@example.com" />
+                    <Input type="email" name="email" value={email} onChange={handleChange} maxLength={50} placeholder="johndoe@example.com" />
                 </div>
                 <div className="flex flex-col gap-1 mb-3">
                     <label>Password:</label>
