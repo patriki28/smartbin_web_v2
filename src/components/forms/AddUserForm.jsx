@@ -68,7 +68,7 @@ export default function AddUserForm() {
                 </div>
                 <div className="form-control mb-2">
                     <label>Email:</label>
-                    <Input type="email" placeholder="Enter email" value={email} name="email" maxLength={20} onChange={handleChange} />
+                    <Input type="email" placeholder="Enter email" value={email} name="email" maxLength={50} onChange={handleChange} />
                 </div>
                 <Button text="Add User" type="submit" variant="primary" loading={loading} />
                 {error && <AlertError error={error} />}

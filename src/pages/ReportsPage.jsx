@@ -47,7 +47,7 @@ export default function ReportsPage() {
     const handleAnalyzeData = async () => {
         if (loading) return;
 
-        if (fill.length === 0 || waste.length === 0) return toast.error('Fill Level Data and Waste Level Data are empty!');
+        if (fill.length === 0 || waste.length === 0) return toast.error('Fill Level Data and Waste Level Data should not be empty!');
 
         setLoading(true);
 
