@@ -42,6 +42,7 @@ export const login = async (userData) => {
 };
 
 export const logout = () => {
+    sessionStorage.removeItem('password');
     signOut(auth);
 };
 
@@ -77,6 +78,8 @@ export const changePassword = async (userData) => {
     const credential = EmailAuthProvider.credential(auth.currentUser.email, userData.currentPassword);
 
     await reauthenticateWithCredential(auth.currentUser, credential);
+
+    sessionStorage.removeItem('password');
 
     await updatePassword(auth.currentUser, userData.newPassword);
 };

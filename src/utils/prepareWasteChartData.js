@@ -3,7 +3,6 @@ export function prepareWasteChartData(filteredData, values, total) {
         acc[type] = filteredData.filter((item) => item.type === type).length;
         return acc;
     }, {});
-
     const chartData = {
         labels: ['Waste Types'],
         datasets: values.map((type, index) => ({
